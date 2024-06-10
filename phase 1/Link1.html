@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link 1</title>
+       <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+  .dropdown:hover .dropdown-menu {
+      display: block;
+  }
+</style>
+<body class="">
+    <header class=" bg-white lg:bg-[#EBEBEB] shadow w-screen flex items-center justify-center  ">
+      <div
+      id="drawer"
+      class="fixed hidden justify-end bg-[#1F2A62] top-0 items-start h-full w-[100%] z-40"
+    >
+ 
+      <ul class="drawerUL text-white flex flex-col justify-evenly h-full px-4">
+        <li class="flex justify-center mr-[24px] ">
+          <button
+          id="close-button"
+            class="close-button flex-grow flex justify-end focus:outline-none"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L15 15M1.00003 15L8.00003 8L15 1"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </li>
+        <li
+        class="block mt-4 lg:inline-block lg:mt-0 text-white mr-2"
+      >
+        <a href="#">About us</a>
+      </li>
+      <li class="block  lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2">
+        <div class="relative inline-block text-left dropdown">
+            <div>
+                <a id="dropdown-button" class="inline-flex text-white justify-center w-full  text-sm font-medium text-gray-700">
+                    Services
+                    <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+            <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <div class="py-1" role="none">
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                    <form method="POST" action="#" role="none">
+                        <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </li>
+
+        <li
+          class="block mt-4 lg:inline-block lg:mt-0 text-white mr-2"
+        >
+          <a href="#">Facilitation Center</a>
+        </li>
+        <li class="block mt-4 lg:inline-block lg:mt-0 ">
+          <div class="relative inline-block text-left dropdown">
+              <div>
+                  <a id="dropdown-button" class=" text-white inline-flex justify-center w-fullpy-2 text-sm font-medium text-gray-700">
+                      Publications
+                      <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                  </a>
+              </div>
+              <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div class="py-1" role="none">
+                      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                      <form method="POST" action="#" role="none">
+                          <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </li>
+      <li class="block mt-4 lg:inline-block lg:mt-0  ">
+        <div class="relative inline-block text-left dropdown">
+            <div>
+                <a id="dropdown-button" class="inline-flex justify-center w-full py-2 text-sm font-medium text-white">
+               Guided Tour
+                    <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+            <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <div class="py-1" role="none">
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                    <form method="POST" action="#" role="none">
+                        <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2">
+      <div class="relative inline-block text-left dropdown">
+          <div>
+              <a id="dropdown-button" class="inline-flex justify-center w-full  py-2 text-sm font-medium text-white">
+         Downloads
+                  <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+              </a>
+          </div>
+          <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <div class="py-1" role="none">
+                  <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                  <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                  <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                  <form method="POST" action="#" role="none">
+                      <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </li>
+  <li class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2">
+    <div class="relative inline-block text-left dropdown">
+        <div>
+            <a id="dropdown-button" class="inline-flex justify-center w-full py-2 text-sm font-medium text-white">
+        FAQs
+                <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+            </a>
+        </div>
+        <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <div class="py-1" role="none">
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                <form method="POST" action="#" role="none">
+                    <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</li>
+<li class="block mt-4 lg:inline-block lg:mt-0 ">
+  <div class="relative inline-block text-left dropdown">
+      <div>
+          <a id="dropdown-button" class="inline-flex justify-center w-full  py-2 text-sm font-medium text-white">
+Customer Care
+              <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+          </a>
+      </div>
+      <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div class="py-1" role="none">
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+              <form method="POST" action="#" role="none">
+                  <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</li>
+       
+      </ul>
+    </div>
+        <div
+          class="container  flex  items-center justify-center lg:flex-col w-full "
+        >
+          <div class="flex items-center w-screen bg-white  lg:justify-between px-[20px] lg:px-[50px] py-4">
+              <div class="flex items-center lg:space-x-2">
+                  <div class="max-w-[120px] lg:max-w-full">
+                      <h3 class="font-semibold text-[10px] lg:text-[24px] tracking-tight">
+                        PAN & Tax Information Network Services
+                      </h3>
+                      <p class=" text-[8px] lg:text-sm">For Income Tax Department</p>
+                    </div>
+                    <div
+                      class="border-l-2 border-l-gray-300 flex items-center px-4  "
+                    >
+                      <img src="../assets/Logo.svg" alt="Logo"  class="lg:block hidden"/>
+                      <img src="../assets/logoMobile.svg" alt="Logo"  class="lg:hidden block"/>
+                    </div>
+              </div>
+           
+              <div class="block lg:hidden flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m1.83-5.16A7 7 0 1111 4a7 7 0 017 7z"/>
+                </svg>
+            </div>
+              <!-- Search Bar -->
+              <div class="relative hidden lg:block ">
+                  <input type="text" placeholder="Search" class="bg-gray-100 text-gray-900 rounded-[8px] pl-6 pr-2 py-2 border-[#1D1D1B] border-[1px] focus:outline-none focbg-whiteus: focus:shadow-outline">
+                  <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <svg class="h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m1.83-5.16A7 7 0 1111 4a7 7 0 017 7z"/>
+                      </svg>
+                  </div>
+              </div>
+        
+          </div>
+          <div class="block lg:hidden">
+            <button
+              id="hamburger-button"
+              class="flex items-center px-3 py-2  rounded text-gray-500 hover:text-gray-600 "
+            >
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z" fill="#1D1D1B"/>
+              </svg>
+              
+            </button>
+          </div>
+          <nav
+            id="nav-menu"
+            class="hidden lg:flex lg:items-center w-screen bg-[#EBEBEB] justify-center "
+          >
+            <ul class="text-sm lg:flex-grow bg-[#EBEBEB] flex justify-center items-center px-10">
+              <li
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+            >
+              <a href="#">About us</a>
+            </li>
+            <li class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2">
+              <div class="relative inline-block text-left dropdown">
+                  <div>
+                      <a id="dropdown-button" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700">
+                          Services
+                          <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                          </svg>
+                      </a>
+                  </div>
+                  <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <div class="py-1" role="none">
+                          <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                          <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                          <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                          <form method="POST" action="#" role="none">
+                              <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </li>
+      
+              <li
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+              >
+                <a href="#">Facilitation Center</a>
+              </li>
+              <li class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2">
+                <div class="relative inline-block text-left dropdown">
+                    <div>
+                        <a id="dropdown-button" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700">
+                            Publications
+                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div class="py-1" role="none">
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                            <form method="POST" action="#" role="none">
+                                <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2">
+              <div class="relative inline-block text-left dropdown">
+                  <div>
+                      <a id="dropdown-button" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700">
+                     Guided Tour
+                          <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                          </svg>
+                      </a>
+                  </div>
+                  <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <div class="py-1" role="none">
+                          <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                          <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                          <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                          <form method="POST" action="#" role="none">
+                              <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2">
+            <div class="relative inline-block text-left dropdown">
+                <div>
+                    <a id="dropdown-button" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700">
+               Downloads
+                        <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+                <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div class="py-1" role="none">
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                        <form method="POST" action="#" role="none">
+                            <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2">
+          <div class="relative inline-block text-left dropdown">
+              <div>
+                  <a id="dropdown-button" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700">
+              FAQs
+                      <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                  </a>
+              </div>
+              <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div class="py-1" role="none">
+                      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                      <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                      <form method="POST" action="#" role="none">
+                          <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </li>
+      <li class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2">
+        <div class="relative inline-block text-left dropdown">
+            <div>
+                <a id="dropdown-button" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700">
+     Customer Care
+                    <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+            <div id="dropdown-menu" class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <div class="py-1" role="none">
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Account settings</a>
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">Support</a>
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem">License</a>
+                    <form method="POST" action="#" role="none">
+                        <button type="submit" class="text-gray-700 block w-full text-left px-4 py-2 text-sm" role="menuitem">Sign out</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </li>
+             
+            </ul>
+           
+          </nav>
+        </div>
+      </header>
+      
+      <script>
+        
+        // JavaScript for Hamburger Menu
+        const hamburgerBtn = document.getElementById("hamburger-button");
+        const drawer = document.getElementById("drawer");
+        const closeBtn = document.getElementById("close-button");
+      
+        hamburgerBtn.addEventListener("click", function () {
+          drawer.classList.toggle("hidden");
+        });
+      
+        closeBtn.addEventListener("click", function () {
+          drawer.classList.add("hidden");
+        });
+      </script>
+      
+      
+      <script>
+        // JavaScript for Hamburger Menu
+    
+
+  
+        // JavaScript for Dropdown Menu
+        const dropdownButton = document.getElementById("dropdown-button");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+  
+        dropdownButton.addEventListener("click", () => {
+          dropdownMenu.classList.toggle("hidden");
+        });
+  
+        // Close dropdown if clicked outside
+        window.addEventListener("click", (event) => {
+          if (
+            !dropdownButton.contains(event.target) &&
+            !dropdownMenu.contains(event.target)
+          ) {
+            dropdownMenu.classList.add("hidden");
+          }
+        });
+      </script>
+</body>
+</html>
