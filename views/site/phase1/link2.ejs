@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .active-border {
+      color: #54ad47 !important;
+      border-bottom: 4px solid #54ad47;
+    }
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .marquee-container {
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee {
+      display: inline-block;
+      animation: marquee 10s linear infinite;
+    }
+
+    @media (max-width: 480px) {
+      /* Mobile */
+      .img-cont {
+        background-size: contain;
+        background-position: 100%;
+      }
+    }
+  </style>
+  <style>
+    .active-border {
+      border-bottom: 3px solid green;
+    }
+
+    @media (max-width: 768px) {
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .tab-link {
+        display: none;
+      }
+      .tab-link.active-tab {
+        display: block;
+      }
+    }
+  </style>
+
+  <body class="overflow-x-hidden">
+    <%- include('../../partials/header'); %>
+    <section class="w-full flex flex-col justify-center items-center relative">
+      <div class="absolute bottom-[0px] left-[45%] z-40">
+        <button>
+          <svg
+            width="66"
+            height="67"
+            viewBox="0 0 66 67"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50.3333 41.3335L35.3817 50.3045C34.326 50.9379 33.0073 50.9379 31.9517 50.3045L17 41.3335"
+              stroke="black"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M50.3333 28L35.3817 36.971C34.326 37.6044 33.0073 37.6044 31.9517 36.971L17 28"
+              stroke="black"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="absolute z-10 right-0 top-0">
+        <img
+          src="../../assets/link2/section1bg1.svg"
+          class="lg:w-[400px] w-[50px] z-10"
+          alt="protean"
+        />
+      </div>
+
+      <div
+        class="flex w-full flex-col lg:flex-row justify-between items-center"
+      >
+        <div class="flex-col hidden lg:flex lg:max-w-[700px] px-[80px]">
+          <h1 class="text-[56px] font-semibold">
+            Permanent Account Number (PAN)
+          </h1>
+          <img
+            src="../../assets/link2/section1bg2.svg "
+            class="w-[250px] ml-[-3rem]"
+          />
+        </div>
+
+        <div class="min-h-full z-40 hidden lg:flex">
+          <img src="../../assets/link2/hand.svg" alt="protean" />
+        </div>
+        <div class="flex lg:hidden w-full">
+       
+          <img src="../../assets/link2/section1img1.png"    class="w-[300px]" alt="protean" />
+        </div>
+        <div class="flex-col flex lg:hidden lg:max-w-[700px] px-[20px]">
+          <h1 class="text-[32px] font-semibold">
+            Permanent Account Number (PAN)
+          </h1>
+          <img
+            src="../../assets/link2/section1bg2.svg "
+            class="w-[160px] ml-[-3rem]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <%- include('../../partials/tab', { tabData: tabData }); %> <%-
+    include('../../partials/footer'); %>
+    <script>
+      function openTab(evt, tabName, tabText) {
+        var i, tabcontent, tablinks;
+
+        // Hide all tab content
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].classList.add("hidden");
+          tabcontent[i].classList.remove("active");
+        }
+
+        // Remove active-tab class from all tab links
+        tablinks = document.querySelectorAll("#dropdown button");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active-tab");
+        }
+
+        // Show the selected tab content and add active class to the clicked tab link
+        document.getElementById(tabName).classList.remove("hidden");
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active-tab");
+
+        // Update the dropdown button text
+        if (tabText) {
+          document.getElementById("dropdownDefaultButton").innerText = tabText;
+        }
+
+        // Hide dropdown menu
+        document.getElementById("dropdown").classList.add("hidden");
+      }
+
+      function toggleDropdown() {
+        var menu = document.getElementById("dropdown");
+        menu.classList.toggle("hidden");
+      }
+
+      // Hide the dropdown menu when clicking outside
+      window.addEventListener("click", function (e) {
+        var dropdown = document.getElementById("dropdown");
+        var button = document.getElementById("dropdownDefaultButton");
+        if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+          dropdown.classList.add("hidden");
+        }
+      });
+
+      // Prevent dropdown toggle when clicking a tab link inside the dropdown
+      document.querySelectorAll("#dropdown button").forEach((button) => {
+        button.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+      });
+    </script>
+
+    <!-- <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          
+          // Hide all tab content
+          tabcontent = document.getElementsByClassName("tab-content");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.add("hidden");
+          }
+          
+          // Remove active-tab and active-border class from all tab links
+          tablinks = document.getElementsByClassName("tab-link");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-tab");
+            tablinks[i].classList.remove("active-border");
+          }
+          
+          // Show the selected tab content and add active classes to the clicked tab link
+          document.getElementById(tabName).classList.remove("hidden");
+          evt.currentTarget.classList.add("active-tab");
+          evt.currentTarget.classList.add("active-border");
+        }
+      </script> -->
+
+    <script>
+      // JavaScript for Hamburger Menu
+      const hamburgerBtn = document.getElementById("hamburger-button");
+      const drawer = document.getElementById("drawer");
+      const closeBtn = document.getElementById("close-button");
+
+      hamburgerBtn.addEventListener("click", function () {
+        drawer.classList.toggle("hidden");
+      });
+
+      closeBtn.addEventListener("click", function () {
+        drawer.classList.add("hidden");
+      });
+    </script>
+
+    <script>
+      // JavaScript for Hamburger Menu
+
+      // JavaScript for Dropdown Menu
+      const dropdownButton = document.getElementById("dropdown-button");
+      const dropdownMenu = document.getElementById("dropdown-menu");
+
+      dropdownButton.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("hidden");
+      });
+
+      // Close dropdown if clicked outside
+      window.addEventListener("click", (event) => {
+        if (
+          !dropdownButton.contains(event.target) &&
+          !dropdownMenu.contains(event.target)
+        ) {
+          dropdownMenu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

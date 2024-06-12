@@ -1,0 +1,2298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    @keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+
+    @media (max-width: 480px) {
+      /* Mobile */
+      .img-cont {
+        background-size: contain;
+        background-position: 100%;
+      }
+    }
+
+  </style>
+  <body class="">
+    <header
+      class="bg-white lg:bg-[#EBEBEB] shadow w-screen flex items-center justify-center"
+    >
+      <div
+        id="drawer"
+        class="fixed hidden justify-end bg-[#1F2A62] top-0 items-start h-full w-[100%] z-40"
+      >
+        <ul
+          class="drawerUL text-white flex flex-col justify-evenly h-full px-4"
+        >
+          <li class="flex justify-center mr-[24px]">
+            <button
+              id="close-button"
+              class="close-button flex-grow flex justify-end focus:outline-none"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L15 15M1.00003 15L8.00003 8L15 1"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </li>
+          <li class="block mt-4 lg:inline-block lg:mt-0 text-white mr-2">
+            <a href="#">About us</a>
+          </li>
+          <li
+            class="block lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+          >
+            <div class="relative inline-block text-left dropdown">
+              <div>
+                <a
+                  id="dropdown-button"
+                  class="inline-flex text-white justify-center w-full text-sm font-medium text-gray-700"
+                >
+                  Services
+                  <svg
+                    class="-mr-1 ml-2 h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div
+                id="dropdown-menu"
+                class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                <div class="py-1" role="none">
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Account settings</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Support</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >License</a
+                  >
+                  <form method="POST" action="#" role="none">
+                    <button
+                      type="submit"
+                      class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                      role="menuitem"
+                    >
+                      Sign out
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="block mt-4 lg:inline-block lg:mt-0 text-white mr-2">
+            <a href="#">Facilitation Center</a>
+          </li>
+          <li class="block mt-4 lg:inline-block lg:mt-0">
+            <div class="relative inline-block text-left dropdown">
+              <div>
+                <a
+                  id="dropdown-button"
+                  class="text-white inline-flex justify-center w-fullpy-2 text-sm font-medium text-gray-700"
+                >
+                  Publications
+                  <svg
+                    class="-mr-1 ml-2 h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div
+                id="dropdown-menu"
+                class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                <div class="py-1" role="none">
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Account settings</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Support</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >License</a
+                  >
+                  <form method="POST" action="#" role="none">
+                    <button
+                      type="submit"
+                      class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                      role="menuitem"
+                    >
+                      Sign out
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="block mt-4 lg:inline-block lg:mt-0">
+            <div class="relative inline-block text-left dropdown">
+              <div>
+                <a
+                  id="dropdown-button"
+                  class="inline-flex justify-center w-full py-2 text-sm font-medium text-white"
+                >
+                  Guided Tour
+                  <svg
+                    class="-mr-1 ml-2 h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div
+                id="dropdown-menu"
+                class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                <div class="py-1" role="none">
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Account settings</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Support</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >License</a
+                  >
+                  <form method="POST" action="#" role="none">
+                    <button
+                      type="submit"
+                      class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                      role="menuitem"
+                    >
+                      Sign out
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+          >
+            <div class="relative inline-block text-left dropdown">
+              <div>
+                <a
+                  id="dropdown-button"
+                  class="inline-flex justify-center w-full py-2 text-sm font-medium text-white"
+                >
+                  Downloads
+                  <svg
+                    class="-mr-1 ml-2 h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div
+                id="dropdown-menu"
+                class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                <div class="py-1" role="none">
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Account settings</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Support</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >License</a
+                  >
+                  <form method="POST" action="#" role="none">
+                    <button
+                      type="submit"
+                      class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                      role="menuitem"
+                    >
+                      Sign out
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+          >
+            <div class="relative inline-block text-left dropdown">
+              <div>
+                <a
+                  id="dropdown-button"
+                  class="inline-flex justify-center w-full py-2 text-sm font-medium text-white"
+                >
+                  FAQs
+                  <svg
+                    class="-mr-1 ml-2 h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div
+                id="dropdown-menu"
+                class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                <div class="py-1" role="none">
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Account settings</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Support</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >License</a
+                  >
+                  <form method="POST" action="#" role="none">
+                    <button
+                      type="submit"
+                      class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                      role="menuitem"
+                    >
+                      Sign out
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="block mt-4 lg:inline-block lg:mt-0">
+            <div class="relative inline-block text-left dropdown">
+              <div>
+                <a
+                  id="dropdown-button"
+                  class="inline-flex justify-center w-full py-2 text-sm font-medium text-white"
+                >
+                  Customer Care
+                  <svg
+                    class="-mr-1 ml-2 h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div
+                id="dropdown-menu"
+                class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              >
+                <div class="py-1" role="none">
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Account settings</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >Support</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                    role="menuitem"
+                    >License</a
+                  >
+                  <form method="POST" action="#" role="none">
+                    <button
+                      type="submit"
+                      class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                      role="menuitem"
+                    >
+                      Sign out
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="container flex items-center justify-center lg:flex-col w-full"
+      >
+        <div
+          class="flex items-center w-screen bg-white lg:justify-between px-[20px] lg:px-[50px] py-4"
+        >
+          <div class="flex items-center lg:space-x-2">
+            <div class="max-w-[120px] lg:max-w-full">
+              <h3
+                class="font-semibold text-[10px] lg:text-[24px] tracking-tight"
+              >
+                PAN & Tax Information Network Services
+              </h3>
+              <p class="text-[8px] lg:text-sm">For Income Tax Department</p>
+            </div>
+            <div class="border-l-2 border-l-gray-300 flex items-center px-4">
+              <img
+                src="../assets/Logo.svg"
+                alt="Logo"
+                class="lg:block hidden"
+              />
+              <img
+                src="../assets/logoMobile.svg"
+                alt="Logo"
+                class="lg:hidden block"
+              />
+            </div>
+          </div>
+
+          <div class="block lg:hidden flex items-center pointer-events-none">
+            <svg
+              class="h-5 w-5 text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-4.35-4.35m1.83-5.16A7 7 0 1111 4a7 7 0 017 7z"
+              />
+            </svg>
+          </div>
+          <!-- Search Bar -->
+          <div class="relative hidden lg:block">
+            <input
+              type="text"
+              placeholder="Search"
+              class="bg-gray-100 text-gray-900 rounded-[8px] pl-6 pr-2 py-2 border-[#1D1D1B] border-[1px] focus:outline-none focbg-whiteus: focus:shadow-outline"
+            />
+            <div
+              class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+            >
+              <svg
+                class="h-5 w-5 text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-4.35-4.35m1.83-5.16A7 7 0 1111 4a7 7 0 017 7z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="block lg:hidden">
+          <button
+            id="hamburger-button"
+            class="flex items-center px-3 py-2 rounded text-gray-500 hover:text-gray-600"
+          >
+            <svg
+              width="18"
+              height="12"
+              viewBox="0 0 18 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z"
+                fill="#1D1D1B"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav
+          id="nav-menu"
+          class="hidden lg:flex lg:items-center w-screen bg-[#EBEBEB] justify-center"
+        >
+          <ul
+            class="text-sm lg:flex-grow bg-[#EBEBEB] flex justify-center items-center px-10"
+          >
+            <li
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+            >
+              <a href="#">About us</a>
+            </li>
+            <li
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+            >
+              <div class="relative inline-block text-left dropdown">
+                <div>
+                  <a
+                    id="dropdown-button"
+                    class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700"
+                  >
+                    Services
+                    <svg
+                      class="-mr-1 ml-2 h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  id="dropdown-menu"
+                  class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                >
+                  <div class="py-1" role="none">
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Account settings</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Support</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >License</a
+                    >
+                    <form method="POST" action="#" role="none">
+                      <button
+                        type="submit"
+                        class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                        role="menuitem"
+                      >
+                        Sign out
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+            >
+              <a href="#">Facilitation Center</a>
+            </li>
+            <li
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+            >
+              <div class="relative inline-block text-left dropdown">
+                <div>
+                  <a
+                    id="dropdown-button"
+                    class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700"
+                  >
+                    Publications
+                    <svg
+                      class="-mr-1 ml-2 h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  id="dropdown-menu"
+                  class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                >
+                  <div class="py-1" role="none">
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Account settings</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Support</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >License</a
+                    >
+                    <form method="POST" action="#" role="none">
+                      <button
+                        type="submit"
+                        class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                        role="menuitem"
+                      >
+                        Sign out
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+            >
+              <div class="relative inline-block text-left dropdown">
+                <div>
+                  <a
+                    id="dropdown-button"
+                    class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700"
+                  >
+                    Guided Tour
+                    <svg
+                      class="-mr-1 ml-2 h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  id="dropdown-menu"
+                  class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                >
+                  <div class="py-1" role="none">
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Account settings</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Support</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >License</a
+                    >
+                    <form method="POST" action="#" role="none">
+                      <button
+                        type="submit"
+                        class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                        role="menuitem"
+                      >
+                        Sign out
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+            >
+              <div class="relative inline-block text-left dropdown">
+                <div>
+                  <a
+                    id="dropdown-button"
+                    class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700"
+                  >
+                    Downloads
+                    <svg
+                      class="-mr-1 ml-2 h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  id="dropdown-menu"
+                  class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                >
+                  <div class="py-1" role="none">
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Account settings</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Support</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >License</a
+                    >
+                    <form method="POST" action="#" role="none">
+                      <button
+                        type="submit"
+                        class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                        role="menuitem"
+                      >
+                        Sign out
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+            >
+              <div class="relative inline-block text-left dropdown">
+                <div>
+                  <a
+                    id="dropdown-button"
+                    class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700"
+                  >
+                    FAQs
+                    <svg
+                      class="-mr-1 ml-2 h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  id="dropdown-menu"
+                  class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                >
+                  <div class="py-1" role="none">
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Account settings</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Support</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >License</a
+                    >
+                    <form method="POST" action="#" role="none">
+                      <button
+                        type="submit"
+                        class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                        role="menuitem"
+                      >
+                        Sign out
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-2"
+            >
+              <div class="relative inline-block text-left dropdown">
+                <div>
+                  <a
+                    id="dropdown-button"
+                    class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700"
+                  >
+                    Customer Care
+                    <svg
+                      class="-mr-1 ml-2 h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div
+                  id="dropdown-menu"
+                  class="dropdown-menu hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                >
+                  <div class="py-1" role="none">
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Account settings</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >Support</a
+                    >
+                    <a
+                      href="#"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                      role="menuitem"
+                      >License</a
+                    >
+                    <form method="POST" action="#" role="none">
+                      <button
+                        type="submit"
+                        class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
+                        role="menuitem"
+                      >
+                        Sign out
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section
+      class="w-full flex flex-col justify-center items-center py-6 relative"
+    >
+      <div class="absolute bottom-[0px] left-[45%] z-40">
+        <button>
+          <svg
+            width="66"
+            height="67"
+            viewBox="0 0 66 67"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50.3333 41.3335L35.3817 50.3045C34.326 50.9379 33.0073 50.9379 31.9517 50.3045L17 41.3335"
+              stroke="black"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M50.3333 28L35.3817 36.971C34.326 37.6044 33.0073 37.6044 31.9517 36.971L17 28"
+              stroke="black"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="absolute right-0 top-0">
+        <img
+          src="./assets/bannerSvg1.jpg"
+          class="lg:w-[177px] w-[50px] z-10"
+          alt="protean"
+        />
+      </div>
+      <div class="absolute left-0 top-[40%] hidden lg;block">
+        <img
+          src="./assets/bannersemi1.jpg"
+          class="w-[60px] h-[201px]"
+          alt="protean"
+        />
+      </div>
+      <div class="w-full justify-center items-center flex flex-col z-20">
+        <p>We have Upgraded!</p>
+        <p class="font-semibold text-[16px] text-[#E43625]">
+          Welcome to the new look of the PAN Services Page.
+        </p>
+      </div>
+
+      <div class="block lg:hidden py-[12px]">
+        <img src="./assets/bannerMobile.png" alt="protean" />
+        <div class="px-[20px] py-[12px] flex flex-col gap-[30px]">
+          <h1 class="text-[32px] max-w-[80%] font-semibold">
+            Get your PAN in just four simple steps!
+          </h1>
+          <button
+            type="button"
+            class="py-[12px] text-base font-medium text-white max-w-[50%] flex items-center justify-between bg-black px-[24px] rounded-[8px] text-center"
+          >
+            Apply now
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2429_15128)">
+                <path
+                  d="M5 12H19"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 16L19 12"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 8L19 12"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2429_15128">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="hidden img-cont min-h-[500px] min-w-full lg:flex flex-col justify-center"
+        style="
+          background-image: url('./assets/bannerbg.jpg');
+          background-size: contain;
+          background-repeat: no-repeat;
+        "
+      >
+        <div class="flex flex-col lg:max-w-[700px] px-[70px] items-start gap-6">
+          <h1 class="text-[56px] font-semibold">
+            Get your PAN in just four simple steps!
+          </h1>
+          <button
+            type="button"
+            class="py-[12px] text-base font-medium text-white min-w-[200px] flex items-center justify-between bg-black px-[24px] rounded-[8px] text-center"
+          >
+            Apply now
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2429_15128)">
+                <path
+                  d="M5 12H19"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 16L19 12"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 8L19 12"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2429_15128">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section
+      class="w-full flex flex-col justify-center py-6 bg-[#1F2A62] relative lg:px-0 lg:min-h-[80vh]"
+    >
+      <div class="hidden lg:block absolute right-10 top-10 bg-[#1F2A62] z-10">
+        <img
+          src="./assets/section2vector.png"
+          alt="protean"
+          class="w-[300.8px]"
+        />
+      </div>
+      <div class="flex flex-col z-40 gap-20">
+        <div
+          class="flex flex-col gap-[60px] lg:flex-row px-[20px] lg:gap-[120px] z-40 lg:px-[70px]"
+        >
+          <div class="flex-col flex gap-10">
+            <p
+              class="text-[26px] text-white font-semibold flex items-center gap-2"
+            >
+              <span><img src="./assets/textSemi1.svg" /></span> PAN Services
+              links
+            </p>
+
+            <ul class="flex flex-col gap-8">
+              <li>
+                <a>
+                  <div
+                    class="flex justify-between py-[8px] border-b-[1px] border-b-white"
+                  >
+                    <p class="text-white">Apply for new PAN</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9495 3.05078L3.04997 12.9503"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.9495 8.70764V3.05078"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.29291 3.05108H12.9498"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <div
+                    class="flex justify-between py-[8px] border-b-[1px] border-b-white"
+                  >
+                    <p class="text-white">Re-print PAN Card</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9495 3.05078L3.04997 12.9503"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.9495 8.70764V3.05078"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.29291 3.05108H12.9498"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <div
+                    class="flex justify-between py-[8px] border-b-[1px] border-b-white"
+                  >
+                    <p class="text-white">Download ePAN</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9495 3.05078L3.04997 12.9503"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.9495 8.70764V3.05078"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.29291 3.05108H12.9498"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <div
+                    class="flex justify-between py-[8px] border-b-[1px] border-b-white"
+                  >
+                    <p class="text-white">Know your Status</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9495 3.05078L3.04997 12.9503"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.9495 8.70764V3.05078"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.29291 3.05108H12.9498"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <div
+                    class="flex justify-between py-[8px] border-b-[1px] border-b-white"
+                  >
+                    <p class="text-white">Online PAN verification</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9495 3.05078L3.04997 12.9503"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.9495 8.70764V3.05078"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.29291 3.05108H12.9498"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-col flex gap-10">
+            <p
+              class="text-[26px] text-white font-semibold flex items-center gap-2"
+            >
+              <span><img src="./assets/textSemi2.svg" /></span>PAN Info links
+            </p>
+
+            <ul class="flex flex-col gap-8">
+              <li>
+                <a>
+                  <div
+                    class="flex justify-between py-[8px] border-b-[1px] border-b-white"
+                  >
+                    <p class="text-white">How to Apply – Video</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9495 3.05078L3.04997 12.9503"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.9495 8.70764V3.05078"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.29291 3.05108H12.9498"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <div
+                    class="flex justify-between py-[8px] border-b-[1px] border-b-white"
+                  >
+                    <p class="text-white">Documents Required</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9495 3.05078L3.04997 12.9503"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.9495 8.70764V3.05078"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.29291 3.05108H12.9498"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <div
+                    class="flex justify-between py-[8px] border-b-[1px] border-b-white"
+                  >
+                    <p class="text-white">PAN Centres</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9495 3.05078L3.04997 12.9503"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.9495 8.70764V3.05078"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.29291 3.05108H12.9498"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-col flex gap-10">
+            <p
+              class="text-[26px] text-white font-semibold flex items-center gap-2"
+            >
+              <span><img src="./assets/textSemi3.svg" /></span>Other Services
+              links
+            </p>
+
+            <ul class="flex flex-col gap-8">
+              <li>
+                <a>
+                  <div
+                    class="flex justify-between py-[8px] border-b-[1px] border-b-white"
+                  >
+                    <p class="text-white">Link PAN to Aadhar</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9495 3.05078L3.04997 12.9503"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.9495 8.70764V3.05078"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.29291 3.05108H12.9498"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <div
+                    class="flex justify-between py-[8px] border-b-[1px] border-b-white"
+                  >
+                    <p class="text-white">ePAN XML Verification Utility</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9495 3.05078L3.04997 12.9503"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.9495 8.70764V3.05078"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.29291 3.05108H12.9498"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-full relative z-40 bg-[#2B538E]">
+          <div class="absolute z-10 left-0 top-2 lg:bottom-[40px]">
+            <img
+              src="./assets/vector2.png"
+              alt="protean"
+              width="40px"
+              height="60px"
+            />
+          </div>
+          <div
+            class="py-[12px] lg:mt-0 mt-14 z-40 lg:px-[70px] lg:max-w-[80%] w-full flex gap-8 lg:gap-0 z-40 flex-col lg:flex-row justify-between px-[20px] lg:items-center"
+          >
+            <a>
+              <div
+                class="flex justify-between py-[8px] min-w-[260px] border-b-[1px] border-b-white"
+              >
+                <p class="text-white">Login as TIN-FC</p>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.9495 3.05078L3.04997 12.9503"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.9495 8.70764V3.05078"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.29291 3.05108H12.9498"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
+
+            <a>
+              <div
+                class="flex justify-between py-[8px] min-w-[260px] border-b-[1px] border-b-white"
+              >
+                <p class="text-white">Login as PAN Verification</p>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.9495 3.05078L3.04997 12.9503"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.9495 8.70764V3.05078"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.29291 3.05108H12.9498"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a>
+              <div
+                class="flex justify-between py-[8px] min-w-[260px] border-b-[1px] border-b-white"
+              >
+                <p class="text-white">Login as AO Account</p>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.9495 3.05078L3.04997 12.9503"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.9495 8.70764V3.05078"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.29291 3.05108H12.9498"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full flex flex-col relative lg:px-0 lg:min-h-[513px]">
+      <div class="flex flex-col lg:flex-row w-full lg:gap-[4px]">
+        <div
+          class="flex flex-col relative justify-start items-start px-[22px] lg:min-w-[358px] py-10 bg-[#EEF7ED] min-h-[513px]"
+        >
+          <div class="absolute bottom-0 left-10">
+            <img src="./assets/dotBg.svg" alt="protean" />
+          </div>
+          <p
+            class="text-[26px] text-black text-left flex items-center justify-start gap-2"
+          >
+            <span><img src="./assets/textSemi3.svg" /></span> Alerts
+          </p>
+
+          <ul class="flex w-full flex-col list-disc px-[16px] mt-6 gap-[28px]">
+            <li class="bullet">
+              <p class="text-[16px] m-0 font-light">
+                For inoperative PAN ------
+                <a class="font-semibold">Read More</a>
+              </p>
+            </li>
+            <li class="m-0">
+              <p class="text-[16px] m-0 font-light">
+                <a class="font-semibold text-[#EE7F25]">Click here </a> to visit
+                our upgraded 2.0 version of ERI (eReturn Intermediary)
+              </p>
+            </li>
+            <li class="m-0">
+              <p class="text-[16px] m-0 font-light">
+                <a class="font-semibold text-[#EE7F25]">Click here </a> to visit
+                our designated PAN Centers for biometric based Aadhar
+                Authentication
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="flex flex-col justify-start items-start px-[22px] lg:min-w-[358px] py-10 bg-[#F1EBF3] min-h-[513px]"
+        >
+          <p
+            class="text-[26px] text-black text-left flex items-center justify-start gap-2"
+          >
+            <span><img src="./assets/textSvg1Sec3.svg" /></span> Reach us
+          </p>
+          <ul class="flex w-full flex-col px-[1px] mt-6 gap-[14px]">
+            <li class="bullet">
+              <p class="text-[16px] m-0 font-light">TIN CALL CENTER</p>
+            </li>
+            <li class="m-0">
+              <p class="text-[16px] m-0 font-light">
+                Address : Protean eGov Technologies Limited4th floor, Sapphire
+                Chambers, Baner Road, Baner, Pune - 411045.
+              </p>
+            </li>
+            <li class="m-0 flex w-full items-center gap-[4px]">
+              <svg
+                width="20"
+                height="19"
+                viewBox="0 0 20 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.5 1H7.5L9.5 6L7 7.5C8.07096 9.67153 9.82847 11.429 12 12.5L13.5 10L18.5 12V16C18.5 16.5304 18.2893 17.0391 17.9142 17.4142C17.5391 17.7893 17.0304 18 16.5 18C12.5993 17.763 8.92015 16.1065 6.15683 13.3432C3.3935 10.5798 1.73705 6.90074 1.5 3C1.5 2.46957 1.71071 1.96086 2.08579 1.58579C2.46086 1.21071 2.96957 1 3.5 1Z"
+                  stroke="#6F368B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <a
+                href="tel:02027218080"
+                class="font-semibold text-[14px] text-[#6F368B]"
+                >020 27218080
+              </a>
+              <p class="text-[14px] font-light">(7am - 11pm, Mon - Sun)</p>
+            </li>
+
+            <li class="m-0 flex w-full items-center gap-[4px]">
+              <svg
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_969_29872)">
+                  <path
+                    d="M13.5 19H5.5C4.96957 19 4.46086 18.7893 4.08579 18.4142C3.71071 18.0391 3.5 17.5304 3.5 17V7C3.5 6.46957 3.71071 5.96086 4.08579 5.58579C4.46086 5.21071 4.96957 5 5.5 5H19.5C20.0304 5 20.5391 5.21071 20.9142 5.58579C21.2893 5.96086 21.5 6.46957 21.5 7V13"
+                    stroke="#6F368B"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3.5 7L12.5 13L21.5 7"
+                    stroke="#6F368B"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16.5 22L21.5 17"
+                    stroke="#6F368B"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21.5 21.5V17H17"
+                    stroke="#6F368B"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_969_29872">
+                    <rect
+                      width="24"
+                      height="24"
+                      fill="white"
+                      transform="translate(0.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+              <a
+                href="mailto:tininfo@proteantech.in"
+                class="font-semibold text-[14px] text-[#6F368B]"
+                >tininfo@proteantech.in</a
+              >
+            </li>
+            <li class="m-0">
+              <p class="text-[14px] m-0 font-light">24 x 7 IVR</p>
+              <p class="text-[14px] mt-2 font-light">
+                Check the status of your PAN/TAN application
+              </p>
+            </li>
+            <li class="m-0 flex w-full items-center gap-[4px]">
+              <svg
+                width="20"
+                height="19"
+                viewBox="0 0 20 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.5 1H7.5L9.5 6L7 7.5C8.07096 9.67153 9.82847 11.429 12 12.5L13.5 10L18.5 12V16C18.5 16.5304 18.2893 17.0391 17.9142 17.4142C17.5391 17.7893 17.0304 18 16.5 18C12.5993 17.763 8.92015 16.1065 6.15683 13.3432C3.3935 10.5798 1.73705 6.90074 1.5 3C1.5 2.46957 1.71071 1.96086 2.08579 1.58579C2.46086 1.21071 2.96957 1 3.5 1Z"
+                  stroke="#6F368B"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <a
+                href="tel:02027218080"
+                class="font-semibold text-[14px] text-[#6F368B]"
+                >08069708080</a
+              >
+            </li>
+            <li class="m-0 flex w-full items-center gap-[4px]">
+              <svg
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.5 23.25C18.299 23.25 23 18.549 23 12.75C23 6.95101 18.299 2.25 12.5 2.25C6.70101 2.25 2 6.95101 2 12.75C2 14.6332 2.49575 16.4005 3.36386 17.9287L2 23.25L7.48615 21.9778C8.97603 22.7891 10.6842 23.25 12.5 23.25ZM12.5 21.6346C17.4068 21.6346 21.3846 17.6568 21.3846 12.75C21.3846 7.84316 17.4068 3.86538 12.5 3.86538C7.59316 3.86538 3.61538 7.84316 3.61538 12.75C3.61538 14.6445 4.20838 16.4006 5.21888 17.8427L4.42308 20.8269L7.45995 20.0677C8.89202 21.0559 10.6284 21.6346 12.5 21.6346Z"
+                  fill="#BFC8D0"
+                />
+                <path
+                  d="M21.5 12C21.5 16.9706 17.4706 21 12.5 21C10.6041 21 8.84516 20.4138 7.39449 19.4127L4.31818 20.1818L5.12432 17.1588C4.10069 15.698 3.5 13.9192 3.5 12C3.5 7.02944 7.52944 3 12.5 3C17.4706 3 21.5 7.02944 21.5 12Z"
+                  fill="url(#paint0_linear_969_29881)"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.5 22.5C18.299 22.5 23 17.799 23 12C23 6.20101 18.299 1.5 12.5 1.5C6.70101 1.5 2 6.20101 2 12C2 13.8832 2.49575 15.6505 3.36386 17.1787L2 22.5L7.48615 21.2278C8.97603 22.0391 10.6842 22.5 12.5 22.5ZM12.5 20.8846C17.4068 20.8846 21.3846 16.9068 21.3846 12C21.3846 7.09316 17.4068 3.11538 12.5 3.11538C7.59316 3.11538 3.61538 7.09316 3.61538 12C3.61538 13.8945 4.20838 15.6506 5.21888 17.0927L4.42308 20.0769L7.45995 19.3177C8.89202 20.3059 10.6284 20.8846 12.5 20.8846Z"
+                  fill="white"
+                />
+                <path
+                  d="M9.87502 7.12504C9.62537 6.6236 9.2424 6.668 8.85551 6.668C8.16407 6.668 7.08594 7.49621 7.08594 9.03759C7.08594 10.3008 7.64259 11.6836 9.51831 13.7522C11.3285 15.7485 13.707 16.7812 15.6817 16.7461C17.6563 16.7109 18.0625 15.0117 18.0625 14.4379C18.0625 14.1835 17.9047 14.0566 17.796 14.0221C17.1231 13.6992 15.882 13.0975 15.5996 12.9844C15.3172 12.8714 15.1698 13.0243 15.0781 13.1075C14.8221 13.3515 14.3144 14.0707 14.1406 14.2325C13.9668 14.3942 13.7077 14.3124 13.5999 14.2512C13.2031 14.092 12.1272 13.6134 11.2696 12.7821C10.209 11.754 10.1467 11.4002 9.94693 11.0854C9.78707 10.8335 9.90437 10.6789 9.96291 10.6114C10.1914 10.3477 10.507 9.94061 10.6485 9.73832C10.79 9.53602 10.6776 9.22889 10.6102 9.03759C10.3203 8.21488 10.0747 7.52618 9.87502 7.12504Z"
+                  fill="white"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_969_29881"
+                    x1="20.375"
+                    y1="5.25"
+                    x2="3.5"
+                    y2="21"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#5BD066" />
+                    <stop offset="1" stop-color="#27B43E" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <a
+                href="tel:02027218080"
+                class="font-semibold text-[14px] text-[#6F368B]"
+                >08069708080</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="flex flex-col justify-start items-start px-[22px] lg:min-w-[358px] py-10 bg-[#FCEBE9] min-h-[513px]"
+        >
+          <p
+            class="text-[26px] text-black text-left flex items-center justify-start gap-2"
+          >
+            <span><img src="./assets/textSvg2Sec3.svg" /></span> More
+            Information @TIN
+          </p>
+          <ul class="flex w-full flex-col list-disc px-[16px] mt-6 gap-[28px]">
+            <li class="bullet">
+              <p class="text-[15px] m-0 font-light">
+                As per ITD guidelines ------
+                <a class="font-semibold">Read More</a>
+              </p>
+            </li>
+            <li class="m-0">
+              <p class="text-[15px] m-0 font-light">
+                You can now get the answers to a range of queries related to
+                PAN/TAN
+              </p>
+            </li>
+            <li class="m-0">
+              <a class="text-[15px] m-0 font-light text-[#E43625]">
+                Click here for Changes/Correction in PAN Card
+              </a>
+            </li>
+            <li class="bullet">
+              <p class="text-[15px] m-0 font-light">
+                "W.e.f July 1, 2017 it is mandatory ------
+                <a class="font-semibold">Read More</a>
+              </p>
+            </li>
+            <li class="bullet">
+              <p class="text-[15px] m-0 font-light">
+                Filing of Statement of Financial Transactions (SFT)Link Aadhaar
+                to Permanent Account Number ( PAN).
+                <a class="font-light text-[#E43625]"
+                  >Click here to Link Aadhar to PAN.</a
+                >
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="flex flex-col justify-start items-start px-[22px] lg:min-w-[358px] py-10 bg-[#FFFAE8] min-h-[513px]"
+        >
+          <p
+            class="text-[26px] text-black text-left flex items-center justify-start gap-2"
+          >
+            <span><img src="./assets/textSemi1.svg" /></span> Welcome to TIN
+            website
+          </p>
+          <ul class="flex w-full flex-col list-disc px-[16px] mt-6 gap-[28px]">
+            <li class="bullet">
+              <p class="text-[15px] m-0 font-light">
+                The general public is hereby informed that the Income Tax
+                Department (ITD), Government of India has appointed only two
+                entities namely Protean eGov Technologies Limited [ formerly
+                known as “NSDL e-Governance Infrastructure Limited” ]
+                (hereinafter “Protean”) and UTI Infrastructure Technologies
+                Services Limited for purpose of receiving and processing of PAN
+                applications on behalf of ITD. No other entity has been
+                authorised to undertake this activity on behalf of ITD.
+              </p>
+            </li>
+
+            <li class="m-0">
+              <a class="text-[15px] m-0 font-light">
+                For more details please click here>>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section
+      class="w-full flex flex-col relative lg:px-0 lg:min-h-[20vh]"
+    >
+      <div class="lg:px-[68px] px-[20px] py-[20px]">
+        <p
+          class="text-[26px] text-black text-left flex items-center justify-start gap-2"
+        >
+          <span><img src="./assets/textSvg2Sec3.svg" /></span> Circulars
+        </p>
+      </div>
+      <div class=" py-[20px] marquee-container overflow-hidden whitespace-nowrap">
+        <div class="marquee flex items-center gap-4">
+          <!-- Original content -->
+          <img src="./assets/sec4svg1.svg" />
+          <a>
+            <div class="flex justify-between py-[8px] px-10 bg-[#EBEBEB] min-h-[72px] items-center border-b-white">
+              <p class="text-black">Caution - Online PAN applicants</p>
+              <svg
+                class="text-black ml-2"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9495 3.05078L3.04997 12.9503"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.9495 8.70764V3.05078"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.29291 3.05108H12.9498"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </a>
+          <img src="./assets/sec4svg2.svg" />
+          <img src="./assets/section4svg3.svg" />
+          <img src="./assets/sec4svg1.svg" />
+          <a>
+            <div class="flex justify-between py-[8px] px-10 bg-[#EBEBEB] min-h-[72px] items-center border-b-white">
+              <p class="text-black">Protean Cautions Public Against Spurious Calls</p>
+              <svg
+                class="text-black ml-2"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9495 3.05078L3.04997 12.9503"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.9495 8.70764V3.05078"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.29291 3.05108H12.9498"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </a>
+          <img src="./assets/sec4svg2.svg" />
+          <img src="./assets/section4svg3.svg" />
+          <img src="./assets/sec4svg1.svg" />
+          <a>
+            <div class="flex justify-between py-[8px] px-10 bg-[#EBEBEB] min-h-[72px] items-center border-b-white">
+              <p class="text-black">Caution - Online PAN applicants</p>
+              <svg
+                class="text-black ml-2"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9495 3.05078L3.04997 12.9503"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.9495 8.70764V3.05078"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.29291 3.05108H12.9498"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </a>
+          <!-- Duplicate content for seamless scrolling -->
+          <img src="./assets/sec4svg1.svg" />
+          <a>
+            <div class="flex justify-between py-[8px] px-10 bg-[#EBEBEB] min-h-[72px] items-center border-b-white">
+              <p class="text-black">Caution - Online PAN applicants</p>
+              <svg
+                class="text-black ml-2"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9495 3.05078L3.04997 12.9503"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.9495 8.70764V3.05078"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.29291 3.05108H12.9498"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </a>
+          <img src="./assets/sec4svg2.svg" />
+          <img src="./assets/section4svg3.svg" />
+          <img src="./assets/sec4svg1.svg" />
+          <a>
+            <div class="flex justify-between py-[8px] px-10 bg-[#EBEBEB] min-h-[72px] items-center border-b-white">
+              <p class="text-black">
+                Protean Cautions Public Against Spurious Calls</p>
+              <svg
+                class="text-black ml-2"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9495 3.05078L3.04997 12.9503"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.9495 8.70764V3.05078"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.29291 3.05108H12.9498"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </a>
+          <img src="./assets/sec4svg2.svg" />
+          <img src="./assets/section4svg3.svg" />
+          <img src="./assets/sec4svg1.svg" />
+          <a>
+            <div class="flex justify-between py-[8px] px-10 bg-[#EBEBEB] min-h-[72px] items-center border-b-white">
+              <p class="text-black">Caution - Online PAN applicants</p>
+              <svg
+                class="text-black ml-2"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9495 3.05078L3.04997 12.9503"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.9495 8.70764V3.05078"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.29291 3.05108H12.9498"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </a>
+          <img src="./assets/sec4svg2.svg" />
+          <img src="./assets/section4svg3.svg" />
+        </div>
+      </div>
+      
+
+    </section>
+    <section
+      class="w-full flex flex-col  bg-[#EE7F25] relative lg:px-0 lg:max-h-[200px]"
+    >
+
+<div class="flex flex-col  relative lg:flex-row  py-[20px]  ">
+  <div class="lg:px-[68px] px-[20px] py-[20px]">
+    <p
+      class="text-[26px] text-black text-left flex items-center justify-start gap-2"
+    >
+      <span><img src="./assets/textSvg2Sec3.svg" /></span> Circulars
+    </p>
+  </div>
+  <img src="assets/sec5lines.svg" class="absolute right-0 top-0 z-10"  />
+  <div class="flex gap-4 px-[70px] flex-1  bg-red-900 w-full justify-center w-max lg:py-[40px] items-center z-40">
+    <a>
+      <div class="flex justify-between py-[8px] px-10 border-l-8 border-l-[#6F368B] bg-[#EBEBEB] min-h-[72px] items-center border-b-white">
+        <p class="text-black">PAN Centers</p>
+        <svg
+          class="text-black ml-2"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.9495 3.05078L3.04997 12.9503"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M12.9495 8.70764V3.05078"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M7.29291 3.05108H12.9498"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </a>
+    <a>
+      <div class="flex justify-between py-[8px] px-10 bg-[#EBEBEB] border-l-8 border-l-[#6F368B] min-h-[72px] items-center border-b-white">
+        <p class="text-black max-w-[210px]">TIN Facilitation Centers cum 
+          PAN centers</p>
+        <svg
+          class="text-black ml-2"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.9495 3.05078L3.04997 12.9503"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M12.9495 8.70764V3.05078"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M7.29291 3.05108H12.9498"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+    </section>
+
+    <script>
+      // JavaScript for Hamburger Menu
+      const hamburgerBtn = document.getElementById("hamburger-button");
+      const drawer = document.getElementById("drawer");
+      const closeBtn = document.getElementById("close-button");
+
+      hamburgerBtn.addEventListener("click", function () {
+        drawer.classList.toggle("hidden");
+      });
+
+      closeBtn.addEventListener("click", function () {
+        drawer.classList.add("hidden");
+      });
+    </script>
+
+    <script>
+      // JavaScript for Hamburger Menu
+
+      // JavaScript for Dropdown Menu
+      const dropdownButton = document.getElementById("dropdown-button");
+      const dropdownMenu = document.getElementById("dropdown-menu");
+
+      dropdownButton.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("hidden");
+      });
+
+      // Close dropdown if clicked outside
+      window.addEventListener("click", (event) => {
+        if (
+          !dropdownButton.contains(event.target) &&
+          !dropdownMenu.contains(event.target)
+        ) {
+          dropdownMenu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

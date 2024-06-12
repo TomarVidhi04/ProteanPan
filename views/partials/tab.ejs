@@ -1,0 +1,143 @@
+<section class="bg-black flex flex-col">
+    <div class="flex py-10 lg:px-[70px] gap-2 items-center w-full">
+        <a class="">
+          <svg
+            width="34"
+            height="17"
+            viewBox="0 0 34 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 8.5C0 13.1944 3.80558 17 8.5 17V0C3.80558 0 0 3.80558 0 8.5Z"
+              fill="#54AD47"
+            />
+            <path
+              d="M8.5 8.5C8.5 13.1944 12.3056 17 17 17V0C12.3056 0 8.5 3.80558 8.5 8.5Z"
+              fill="#54AD47"
+            />
+            <circle cx="25.5" cy="8.5" r="8.5" fill="#54AD47" />
+          </svg>
+        </a>
+
+        <h3 class="font-semibold text-[26px] text-white">Our Services</h3>
+      </div>
+      <div class="p-5">
+        
+        <div class="lg:flex lg:justify-between mb-5 lg:px-[170px] w-full lg:border-b-[1px]">
+            <!-- Custom Dropdown for Mobile View -->
+            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white block lg:hidden   font-medium rounded-lg text-sm px-5 py-2.5 text-center flex justify-between items-center w-full border-[1px] border-[#514B4B]" type="button" onclick="toggleDropdown()">PAN <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></button>
+
+            <!-- Dropdown menu -->
+            <div id="dropdown" class="z-10 w-full  hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-900">
+                <ul class="py-2 flex flex-col text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                    <li>
+                        <button class="tab-link block text-left text-white px-4 py-2" onclick="openTab(event, 'tab1', 'PAN')">PAN</button>
+                    </li>
+                    <li>
+                        <button class="tab-link block text-left text-white px-4 py-2" onclick="openTab(event, 'tab2', 'TAN')">TAN</button>
+                    </li>
+                    <li>
+                        <button class="tab-link block text-left text-white px-4 py-2" onclick="openTab(event, 'tab3', 'e-TDS/TCS')">e-TDS/TCS</button>
+                    </li>
+
+
+                </ul>
+            </div>
+
+
+            <!-- Tab Buttons for Desktop View -->
+             <div class="hidden lg:block">
+
+     
+            <button class="tab-link hidden lg:inline-block min-w-[300px] text-white px-4 py-2 active-tab active-border" onclick="openTab(event, 'tab1')">PAN</button>
+            <button class="tab-link hidden lg:inline-block min-w-[300px] text-white px-4 py-2" onclick="openTab(event, 'tab2')">TAN</button>
+            <button class="tab-link hidden lg:inline-block min-w-[300px] text-white px-4 py-2" onclick="openTab(event, 'tab3')">e-TDS/TCS</button>
+        </div>
+        </div>
+          
+        
+  
+      <% for (let tab in tabData) { %>
+        <div id="<%= tab %>" class="tab-content <%= tab === 'tab1' ? '' : 'hidden' %> lg:px-[70px] flex flex-wrap w-full">
+          <% 
+            // Divide the items into four parts
+            const quarter = Math.ceil(tabData[tab].length / 4);
+            const firstQuarter = tabData[tab].slice(0, quarter);
+            const secondQuarter = tabData[tab].slice(quarter, quarter * 2);
+            const thirdQuarter = tabData[tab].slice(quarter * 2, quarter * 3);
+            const fourthQuarter = tabData[tab].slice(quarter * 3);
+          %>
+          
+          <div class="flex flex-col lg:flex-row w-full lg:gap-20">
+            <ul class="flex flex-col lg:w-[50%]">
+              <% firstQuarter.forEach(function(item) { %>
+                <li class="">
+                  <a>
+                    <div class="flex justify-between items-center lg:items-start py-[24px] border-b-[1px] border-b-white">
+                      <p class="text-white max-w-[80%] lg:max-w-[500px]"><%= item.title %></p>
+                      <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.857178 10.5714L5.42861 6.00002L0.857178 1.42859" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                    </div>
+                  </a>
+                </li>
+              <% }); %>
+            </ul>
+  
+            <ul class="flex flex-col lg:w-[50%]">
+              <% secondQuarter.forEach(function(item) { %>
+                <li>
+                  <a>
+                    <div class="flex justify-between items-center lg:items-start py-[24px] border-b-[1px] border-b-white">
+                      <p class="text-white max-w-[80%]  lg:max-w-[500px]"><%= item.title %></p>
+                      <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.857178 10.5714L5.42861 6.00002L0.857178 1.42859" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                    </div>
+                  </a>
+                </li>
+              <% }); %>
+            </ul>
+          </div>
+  
+          <div class="flex flex-col lg:flex-row w-full mt-10 gap-20">
+            <ul class="flex flex-col lg:w-[50%]">
+              <% thirdQuarter.forEach(function(item) { %>
+                <li>
+                  <a>
+                    <div class="flex justify-between items-center lg:items-start py-[24px] border-b-[1px] border-b-white">
+                      <p class="text-white max-w-[80%]  lg:max-w-[500px]"><%= item.title %></p>
+                      <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.857178 10.5714L5.42861 6.00002L0.857178 1.42859" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                    </div>
+                  </a>
+                </li>
+              <% }); %>
+            </ul>
+  
+            <ul class="flex flex-col lg:w-[50%]">
+              <% fourthQuarter.forEach(function(item) { %>
+                <li>
+                  <a>
+                    <div class="flex justify-between items-center lg:items-start py-[24px] border-b-[1px] border-b-white">
+                      <p class="text-white max-w-[80%]  lg:max-w-[500px]"><%= item.title %></p>
+                      <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.857178 10.5714L5.42861 6.00002L0.857178 1.42859" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                    </div>
+                  </a>
+                </li>
+              <% }); %>
+            </ul>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </section>
+  

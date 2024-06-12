@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Link 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <%- include('../partials/header'); %>
+
+kjfierfee
+
+
+
+    <%- include('../partials/footer'); %>
+
+    <script>
+        // JavaScript for Hamburger Menu
+        const hamburgerBtn = document.getElementById("hamburger-button");
+        const drawer = document.getElementById("drawer");
+        const closeBtn = document.getElementById("close-button");
+  
+        hamburgerBtn.addEventListener("click", function () {
+          drawer.classList.toggle("hidden");
+        });
+  
+        closeBtn.addEventListener("click", function () {
+          drawer.classList.add("hidden");
+        });
+      </script>
+  
+      <script>
+        // JavaScript for Hamburger Menu
+  
+        // JavaScript for Dropdown Menu
+        const dropdownButton = document.getElementById("dropdown-button");
+        const dropdownMenu = document.getElementById("dropdown-menu");
+  
+        dropdownButton.addEventListener("click", () => {
+          dropdownMenu.classList.toggle("hidden");
+        });
+  
+        // Close dropdown if clicked outside
+        window.addEventListener("click", (event) => {
+          if (
+            !dropdownButton.contains(event.target) &&
+            !dropdownMenu.contains(event.target)
+          ) {
+            dropdownMenu.classList.add("hidden");
+          }
+        });
+      </script>
+  </body>
+</html>
